@@ -25,10 +25,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="75f-hS-0bg">
-                                <rect key="frame" x="0.0" y="556" width="600" height="40"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="75f-hS-0bg">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="V3q-Pp-pVZ"/>
+                                    <constraint firstAttribute="height" constant="44" id="V3q-Pp-pVZ"/>
                                 </constraints>
                                 <items>
                                     <barButtonItem title="Item" id="AAR-YC-LYu"/>
