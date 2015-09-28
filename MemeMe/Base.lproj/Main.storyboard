@@ -92,6 +92,7 @@
                             </mask>
                             <mask key="constraints">
                                 <include reference="FU7-fG-tOC"/>
+                                <include reference="tC9-yb-qDg"/>
                                 <include reference="C2A-H4-P2r"/>
                             </mask>
                         </variation>
@@ -102,6 +103,7 @@
                             </mask>
                             <mask key="constraints">
                                 <include reference="FU7-fG-tOC"/>
+                                <include reference="tC9-yb-qDg"/>
                                 <include reference="C2A-H4-P2r"/>
                             </mask>
                         </variation>
