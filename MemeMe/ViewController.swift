@@ -30,6 +30,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        shareButton.enabled = false
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -45,7 +46,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.subscribeToKeyboardNotifications()
         
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
-        shareButton.enabled = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,8 +71,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             self.imageView.image = image
+            shareButton.enabled = true
         }
-        shareButton.enabled = true
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
