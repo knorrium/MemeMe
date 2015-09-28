@@ -17,16 +17,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="TOP TEXT GOES HERE" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XNo-pz-a4V">
-                                <rect key="frame" x="20" y="60" width="560" height="44"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="TOP TEXT GOES HERE" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XNo-pz-a4V">
+                                <rect key="frame" x="20" y="60" width="560" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Ovx-ZY-t1J"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="BOTTOM TEXT GOES HERE" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nHX-7s-exr">
-                                <rect key="frame" x="20" y="500" width="560" height="35"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="75f-hS-0bg">
+                                <rect key="frame" x="0.0" y="556" width="600" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="V3q-Pp-pVZ"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Item" id="AAR-YC-LYu"/>
+                                </items>
+                            </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="BOTTOM TEXT GOES HERE" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nHX-7s-exr">
+                                <rect key="frame" x="20" y="470" width="560" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="cJx-vv-AhP"/>
                                 </constraints>
@@ -38,12 +47,20 @@
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nHX-7s-exr" secondAttribute="bottom" constant="50" id="0NU-rm-C6G"/>
                             <constraint firstItem="nHX-7s-exr" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="80J-LN-1jV"/>
-                            <constraint firstItem="nHX-7s-exr" firstAttribute="top" secondItem="XNo-pz-a4V" secondAttribute="bottom" constant="411" id="C2A-H4-P2r"/>
+                            <constraint firstItem="nHX-7s-exr" firstAttribute="top" secondItem="XNo-pz-a4V" secondAttribute="bottom" constant="320" id="C2A-H4-P2r"/>
                             <constraint firstItem="XNo-pz-a4V" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="FU7-fG-tOC"/>
                             <constraint firstItem="nHX-7s-exr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KsI-96-Ek2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="75f-hS-0bg" secondAttribute="bottom" id="WYz-ZD-0SL"/>
                             <constraint firstItem="XNo-pz-a4V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Xrx-fp-djw"/>
                             <constraint firstItem="XNo-pz-a4V" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ioC-4n-6kK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nHX-7s-exr" secondAttribute="bottom" constant="86" id="uHN-8u-7BV"/>
+                            <constraint firstItem="75f-hS-0bg" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="zU4-K6-EKZ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0NU-rm-C6G"/>
+                            </mask>
+                        </variation>
                         <variation key="heightClass=compact">
                             <mask key="subviews">
                                 <exclude reference="XNo-pz-a4V"/>
