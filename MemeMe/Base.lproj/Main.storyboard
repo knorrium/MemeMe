@@ -35,6 +35,9 @@
                                     <barButtonItem title="Camera" id="hnv-9V-lcW"/>
                                 </items>
                             </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oPo-94-fvu">
+                                <rect key="frame" x="180" y="192" width="240" height="128"/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="BOTTOM TEXT GOES HERE" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nHX-7s-exr">
                                 <rect key="frame" x="20" y="470" width="560" height="44"/>
                                 <constraints>
@@ -54,6 +57,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="75f-hS-0bg" secondAttribute="bottom" id="WYz-ZD-0SL"/>
                             <constraint firstItem="XNo-pz-a4V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Xrx-fp-djw"/>
                             <constraint firstItem="XNo-pz-a4V" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ioC-4n-6kK"/>
+                            <constraint firstItem="oPo-94-fvu" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="j7Q-Bk-TLI"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nHX-7s-exr" secondAttribute="bottom" constant="86" id="uHN-8u-7BV"/>
                             <constraint firstItem="75f-hS-0bg" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="zU4-K6-EKZ"/>
                         </constraints>
@@ -83,6 +87,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="bottomText" destination="nHX-7s-exr" id="1Sf-i4-vFd"/>
+                        <outlet property="cameraButton" destination="hnv-9V-lcW" id="lRF-2e-aTC"/>
+                        <outlet property="galleryButton" destination="AAR-YC-LYu" id="Ydn-Bv-xM0"/>
+                        <outlet property="imageView" destination="oPo-94-fvu" id="M1u-zD-ux7"/>
+                        <outlet property="topText" destination="XNo-pz-a4V" id="rDG-AP-rbc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,6 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var topText: UITextField!
+    @IBOutlet weak var bottomText: UITextField!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var galleryButton: UIBarButtonItem!
+    @IBOutlet weak var cameraButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
