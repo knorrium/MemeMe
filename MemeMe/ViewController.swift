@@ -43,6 +43,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         bottomText.delegate = self
         
         self.subscribeToKeyboardNotifications()
+        
+        cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
     }
 
     override func didReceiveMemoryWarning() {
