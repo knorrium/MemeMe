@@ -17,6 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oPo-94-fvu">
+                                <rect key="frame" x="20" y="116" width="560" height="341"/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="TOP TEXT GOES HERE" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XNo-pz-a4V">
                                 <rect key="frame" x="20" y="60" width="560" height="39"/>
                                 <constraints>
@@ -49,9 +52,6 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oPo-94-fvu">
-                                <rect key="frame" x="180" y="192" width="240" height="128"/>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="BOTTOM TEXT GOES HERE" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nHX-7s-exr">
                                 <rect key="frame" x="20" y="470" width="560" height="44"/>
                                 <constraints>
@@ -66,13 +66,18 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nHX-7s-exr" secondAttribute="bottom" constant="50" id="0NU-rm-C6G"/>
                             <constraint firstItem="nHX-7s-exr" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="80J-LN-1jV"/>
                             <constraint firstItem="nHX-7s-exr" firstAttribute="top" secondItem="XNo-pz-a4V" secondAttribute="bottom" constant="320" id="C2A-H4-P2r"/>
-                            <constraint firstItem="XNo-pz-a4V" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="FU7-fG-tOC"/>
+                            <constraint firstItem="XNo-pz-a4V" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="FU7-fG-tOC"/>
+                            <constraint firstItem="oPo-94-fvu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GdJ-DG-jCZ"/>
                             <constraint firstItem="nHX-7s-exr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KsI-96-Ek2"/>
+                            <constraint firstAttribute="trailing" secondItem="oPo-94-fvu" secondAttribute="trailing" id="VzB-3C-snQ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="75f-hS-0bg" secondAttribute="bottom" id="WYz-ZD-0SL"/>
                             <constraint firstItem="XNo-pz-a4V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Xrx-fp-djw"/>
+                            <constraint firstAttribute="trailing" secondItem="oPo-94-fvu" secondAttribute="trailing" constant="20" id="eB2-T8-36e"/>
                             <constraint firstItem="XNo-pz-a4V" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ioC-4n-6kK"/>
-                            <constraint firstItem="oPo-94-fvu" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="j7Q-Bk-TLI"/>
+                            <constraint firstItem="oPo-94-fvu" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="tC9-yb-qDg"/>
+                            <constraint firstItem="nHX-7s-exr" firstAttribute="bottom" secondItem="oPo-94-fvu" secondAttribute="bottom" constant="13" id="tqS-CA-Arp"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nHX-7s-exr" secondAttribute="bottom" constant="86" id="uHN-8u-7BV"/>
+                            <constraint firstItem="oPo-94-fvu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="x5b-hE-4ko"/>
                             <constraint firstItem="75f-hS-0bg" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="zU4-K6-EKZ"/>
                         </constraints>
                         <variation key="default">
@@ -113,6 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="201"/>
         </scene>
     </scenes>
 </document>
