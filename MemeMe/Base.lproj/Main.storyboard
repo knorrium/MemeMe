@@ -42,7 +42,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="dfp-yN-A0R"/>
-                                    <barButtonItem systemItem="action" id="qjO-Q0-YLe"/>
+                                    <barButtonItem systemItem="action" id="qjO-Q0-YLe">
+                                        <connections>
+                                            <action selector="shareMeme:" destination="BYZ-38-t0r" id="rB9-br-x3T"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oPo-94-fvu">

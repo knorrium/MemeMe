@@ -111,5 +111,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return true
     }
     
+    @IBAction func shareMeme(sender: AnyObject) {
+
+    }
 }
 
