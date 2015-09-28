@@ -59,7 +59,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
 
     @IBAction func pickImageFromGallery(sender: UIBarButtonItem) {
-        NSLog("Gallery")
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
@@ -97,11 +96,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     func textFieldDidBeginEditing(textField: UITextField) {
-        NSLog(textField.description)
+        // Clear the text field if it's filled with the default value
         self.editingField = textField
-        
-        NSLog(editingField.text!)
-        NSLog(defaultTopText)
         
         if (textField == topText && editingField.text == self.defaultTopText) {
             textField.text = ""
@@ -124,14 +120,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func keyboardWillShow(notification: NSNotification) {
-        NSLog("keyboardWillShow, move view")
         if (self.editingField == self.bottomText) {
             self.view.frame.origin.y -= getKeyboardHeight(notification)
         }
     }
     
     func keyboardWillHide(notification: NSNotification) {
-        NSLog("keyboard will hide")
         if (self.editingField == self.bottomText) {
             self.view.frame.origin.y = 0
         }
