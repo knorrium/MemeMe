@@ -107,6 +107,7 @@
                         <outlet property="galleryButton" destination="AAR-YC-LYu" id="Ydn-Bv-xM0"/>
                         <outlet property="imageView" destination="oPo-94-fvu" id="M1u-zD-ux7"/>
                         <outlet property="shareButton" destination="qjO-Q0-YLe" id="2ya-OT-Sg6"/>
+                        <outlet property="toolbar" destination="75f-hS-0bg" id="hkR-UH-Rr9"/>
                         <outlet property="topText" destination="XNo-pz-a4V" id="rDG-AP-rbc"/>
                     </connections>
                 </viewController>
