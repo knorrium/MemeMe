@@ -39,5 +39,14 @@ UINavigationControllerDelegate {
     @IBAction func pickImageFromCamera(sender: UIBarButtonItem) {
         NSLog("Camera")
     }
+    
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            self.imageView.image = image
+        }
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 }
 
