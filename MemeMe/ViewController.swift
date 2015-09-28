@@ -21,6 +21,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     weak var editingField: UITextField!
     weak var memedImage: UIImage!
     
+    var defaultTopText = "TOP TEXT GOES HERE"
+    var defaultBottomText = "BOTTOM TEXT GOES HERE"
+    
     let memeTextAttributes = [
         NSStrokeColorAttributeName : UIColor.blackColor(),
         NSForegroundColorAttributeName: UIColor.whiteColor(),
@@ -96,6 +99,28 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func textFieldDidBeginEditing(textField: UITextField) {
         NSLog(textField.description)
         self.editingField = textField
+        
+        NSLog(editingField.text!)
+        NSLog(defaultTopText)
+        
+        if (textField == topText && editingField.text == self.defaultTopText) {
+            textField.text = ""
+        }
+        
+        if (textField == bottomText && editingField.text == self.defaultBottomText) {
+            textField.text = ""
+        }
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        // Reset the value of the TextField in case it becomes empty
+        if (textField.text?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()) == "") {
+            if (textField == topText) {
+                textField.text = self.defaultTopText
+            } else {
+                textField.text = self.defaultBottomText
+            }
+        }
     }
     
     func keyboardWillShow(notification: NSNotification) {
