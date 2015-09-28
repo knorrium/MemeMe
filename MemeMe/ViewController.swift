@@ -16,11 +16,27 @@ UINavigationControllerDelegate {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var galleryButton: UIBarButtonItem!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
+
+    let memeTextAttributes = [
+        NSStrokeColorAttributeName : UIColor.blackColor(),
+        NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+        NSStrokeWidthAttributeName : -4,
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    override func viewWillAppear(animated: Bool) {
+        topText.defaultTextAttributes = memeTextAttributes
+        bottomText.defaultTextAttributes = memeTextAttributes
+
+        topText.textAlignment = NSTextAlignment.Center
+        bottomText.textAlignment = NSTextAlignment.Center
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
