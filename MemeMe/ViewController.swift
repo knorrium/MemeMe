@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate,
+UINavigationControllerDelegate {
 
     @IBOutlet weak var topText: UITextField!
     @IBOutlet weak var bottomText: UITextField!
@@ -28,7 +29,10 @@ class ViewController: UIViewController {
 
     @IBAction func pickImageFromGallery(sender: UIBarButtonItem) {
         NSLog("Gallery")
-        
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        self.presentViewController(imagePicker, animated: true, completion: nil)
     }
     
     
