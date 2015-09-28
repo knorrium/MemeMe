@@ -18,6 +18,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var shareButton: UIBarButtonItem!
 
     weak var editingField: UITextField!
+    weak var memedImage: UIImage!
     
     let memeTextAttributes = [
         NSStrokeColorAttributeName : UIColor.blackColor(),
@@ -111,8 +112,37 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return true
     }
     
-    @IBAction func shareMeme(sender: AnyObject) {
+    func save() {
+        //Create the meme
+        self.memedImage = generateMemedImage()
+        let meme = Meme(topText: topText.text!,
+            bottomText: bottomText.text!,
+            image: imageView.image!,
+            memedImage: memedImage)
+    }
 
+    func generateMemedImage() -> UIImage {
+        
+        // TODO: Hide toolbar and navbar
+        
+        // Render view to an image
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        self.view.drawViewHierarchyInRect(self.view.frame,
+            afterScreenUpdates: true)
+        let memedImage : UIImage =
+        UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        // TODO:  Show toolbar and navbar
+        
+        return memedImage
+    }
+    
+    @IBAction func shareMeme(sender: AnyObject) {
+        save()
+        
+        let ShareVC = UIActivityViewController(activityItems:[memedImage], applicationActivities: nil)
+        self.presentViewController(ShareVC, animated: true, completion: nil)
     }
 }
 
