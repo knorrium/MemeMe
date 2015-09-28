@@ -31,7 +31,8 @@
                                     <constraint firstAttribute="height" constant="44" id="V3q-Pp-pVZ"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Item" id="AAR-YC-LYu"/>
+                                    <barButtonItem title="Gallery" id="AAR-YC-LYu"/>
+                                    <barButtonItem title="Camera" id="hnv-9V-lcW"/>
                                 </items>
                             </toolbar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="BOTTOM TEXT GOES HERE" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nHX-7s-exr">
