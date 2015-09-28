@@ -31,8 +31,16 @@
                                     <constraint firstAttribute="height" constant="44" id="V3q-Pp-pVZ"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Gallery" id="AAR-YC-LYu"/>
-                                    <barButtonItem title="Camera" id="hnv-9V-lcW"/>
+                                    <barButtonItem title="Gallery" id="AAR-YC-LYu">
+                                        <connections>
+                                            <action selector="pickImageFromGallery:" destination="BYZ-38-t0r" id="3hZ-RH-0wj"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Camera" id="hnv-9V-lcW">
+                                        <connections>
+                                            <action selector="pickImageFromCamera:" destination="BYZ-38-t0r" id="dbT-n6-4Qt"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oPo-94-fvu">

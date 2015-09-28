@@ -26,5 +26,14 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func pickImageFromGallery(sender: UIBarButtonItem) {
+        NSLog("Gallery")
+        
+    }
+    
+    
+    @IBAction func pickImageFromCamera(sender: UIBarButtonItem) {
+        NSLog("Camera")
+    }
 }
 
