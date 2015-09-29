@@ -122,14 +122,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func keyboardWillShow(notification: NSNotification) {
         if (self.editingField == self.bottomText) {
-            self.view.frame.origin.y -= getKeyboardHeight(notification)
+            self.view.frame.origin.y = 0 - getKeyboardHeight(notification)
         }
     }
     
     func keyboardWillHide(notification: NSNotification) {
-        if (self.editingField == self.bottomText) {
-            self.view.frame.origin.y = 0
-        }
+        self.view.frame.origin.y = 0
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
