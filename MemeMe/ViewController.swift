@@ -35,7 +35,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         shareButton.enabled = false
-        self.subscribeToKeyboardNotifications()
+        subscribeToKeyboardNotifications()
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -61,23 +61,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        self.presentViewController(imagePicker, animated: true, completion: nil)
+        presentViewController(imagePicker, animated: true, completion: nil)
     }
     
     @IBAction func pickImageFromCamera(sender: UIBarButtonItem) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
-        self.presentViewController(imagePicker, animated: true, completion: nil)
+        presentViewController(imagePicker, animated: true, completion: nil)
 
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            self.imageView.image = image
+            imageView.image = image
             shareButton.enabled = true
         }
-        self.dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     func getKeyboardHeight(notification: NSNotification) -> CGFloat {
@@ -98,13 +98,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     func textFieldDidBeginEditing(textField: UITextField) {
         // Clear the text field if it's filled with the default value
-        self.editingField = textField
+        editingField = textField
         
-        if (textField == topText && editingField.text == self.defaultTopText) {
+        if (textField == topText && editingField.text == defaultTopText) {
             textField.text = ""
         }
         
-        if (textField == bottomText && editingField.text == self.defaultBottomText) {
+        if (textField == bottomText && editingField.text == defaultBottomText) {
             textField.text = ""
         }
     }
@@ -113,21 +113,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // Reset the value of the TextField in case it becomes empty
         if (textField.text?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()) == "") {
             if (textField == topText) {
-                textField.text = self.defaultTopText
+                textField.text = defaultTopText
             } else {
-                textField.text = self.defaultBottomText
+                textField.text = defaultBottomText
             }
         }
     }
     
     func keyboardWillShow(notification: NSNotification) {
-        if (self.editingField == self.bottomText) {
-            self.view.frame.origin.y = 0 - getKeyboardHeight(notification)
+        if (editingField == bottomText) {
+            view.frame.origin.y = 0 - getKeyboardHeight(notification)
         }
     }
     
     func keyboardWillHide(notification: NSNotification) {
-        self.view.frame.origin.y = 0
+        view.frame.origin.y = 0
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -137,7 +137,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func save() {
         //Create the meme
-        self.memedImage = generateMemedImage()
+        memedImage = generateMemedImage()
         let meme = Meme(topText: topText.text!,
             bottomText: bottomText.text!,
             image: imageView.image!,
@@ -149,8 +149,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         toolbar.hidden = true
         
         // Render view to an image
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        self.view.drawViewHierarchyInRect(self.view.frame,
+        UIGraphicsBeginImageContext(view.frame.size)
+        view.drawViewHierarchyInRect(view.frame,
             afterScreenUpdates: true)
         let memedImage : UIImage =
         UIGraphicsGetImageFromCurrentImageContext()
@@ -165,7 +165,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         save()
         
         let ShareVC = UIActivityViewController(activityItems:[memedImage], applicationActivities: nil)
-        self.presentViewController(ShareVC, animated: true, completion: nil)
+        presentViewController(ShareVC, animated: true, completion: nil)
     }
 }
 
