@@ -35,6 +35,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         shareButton.enabled = false
+        self.subscribeToKeyboardNotifications()
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -46,8 +47,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         topText.delegate = self
         bottomText.delegate = self
-        
-        self.subscribeToKeyboardNotifications()
         
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
     }
