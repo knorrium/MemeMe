@@ -144,7 +144,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             topText: topText.text!,
             bottomText: topText.text!,
             image: imageView.image!,
-            memedImage: self.memedImage)
+            memedImage: memedImage)
     }
 
     func generateMemedImage() -> UIImage {
