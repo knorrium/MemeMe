@@ -142,7 +142,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         memedImage = generateMemedImage()
         meme = Meme(
             topText: topText.text!,
-            bottomText: topText.text!,
+            bottomText: bottomText.text!,
             image: imageView.image!,
             memedImage: memedImage)
         
