@@ -15,7 +15,7 @@ class SentMemesTableViewController: UIViewController, UITableViewDataSource {
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override func viewDidLoad() {
-        tableView.registerClass(SentMemesTableViewCell.self, forCellReuseIdentifier: "sentMemesTableViewCell")
+        tableView.registerClass(SentMemesTableViewCell.self, forCellReuseIdentifier: "SentMemesTableViewCell")
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -27,7 +27,7 @@ class SentMemesTableViewController: UIViewController, UITableViewDataSource {
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("sentMemesTableViewCell")!
+        let cell = tableView.dequeueReusableCellWithIdentifier("SentMemesTableViewCell")!
         let meme = self.appDelegate.memes[indexPath.row]
         
         cell.textLabel?.text = meme.topText + " " + meme.bottomText
