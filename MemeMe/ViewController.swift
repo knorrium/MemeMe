@@ -149,15 +149,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func save() {
-        //Create the meme
+        //Create or update the meme
         memedImage = generateMemedImage()
         meme = Meme(
             topText: topText.text!,
             bottomText: bottomText.text!,
             image: imageView.image!,
             memedImage: memedImage)
-        
-        (UIApplication.sharedApplication().delegate as! AppDelegate).memes.append(meme)
+
+        if ((savedIndex) != nil) {
+            appDelegate.memes[savedIndex!] = meme
+        } else {
+            appDelegate.memes.append(meme)
+        }
     }
 
     func generateMemedImage() -> UIImage {
