@@ -27,7 +27,6 @@ class SentMemesTableViewController: UIViewController, UITableViewDataSource {
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        NSLog("tableView");
         let cell = tableView.dequeueReusableCellWithIdentifier("sentMemesTableViewCell")!
         let meme = self.appDelegate.memes[indexPath.row]
         
