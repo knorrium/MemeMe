@@ -26,6 +26,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var defaultTopText = "TOP TEXT"
     var defaultBottomText = "BOTTOM TEXT"
     
+    var savedIndex: Int? = nil
+    
     let memeTextAttributes = [
         NSStrokeColorAttributeName : UIColor.blackColor(),
         NSForegroundColorAttributeName: UIColor.whiteColor(),
