@@ -55,6 +55,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         bottomText.delegate = self
         
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
+        
+        if ((savedIndex) != nil) {
+            topText.text = appDelegate.memes[savedIndex!].topText
+            bottomText.text = appDelegate.memes[savedIndex!].bottomText
+            imageView.image = appDelegate.memes[savedIndex!].image
+            shareButton.enabled = true
+        }
     }
 
     override func didReceiveMemoryWarning() {
