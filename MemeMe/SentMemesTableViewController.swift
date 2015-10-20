@@ -23,12 +23,12 @@ class SentMemesTableViewController: UIViewController, UITableViewDataSource {
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.appDelegate.memes.count
+        return appDelegate.memes.count
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("SentMemesTableViewCell")!
-        let meme = self.appDelegate.memes[indexPath.row]
+        let meme = appDelegate.memes[indexPath.row]
         
         cell.textLabel?.text = meme.topText + " " + meme.bottomText
         cell.imageView?.image = meme.memedImage
