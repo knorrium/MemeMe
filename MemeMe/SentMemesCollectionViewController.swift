@@ -58,7 +58,7 @@ class SentMemesCollectionViewController: UIViewController, UICollectionViewDataS
         let detailController = self.storyboard!.instantiateViewControllerWithIdentifier("SentMemesDetailViewController") as! SentMemesDetailViewController
         
         detailController.memedImage = appDelegate.memes[indexPath.row].memedImage
-        
+        detailController.savedIndex = indexPath.row
         navigationController!.pushViewController(detailController, animated: true)
     }
 
