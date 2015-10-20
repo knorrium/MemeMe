@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 struct Meme {
-    // structure for storing memes
     var topText = ""
     var bottomText = ""
     var image: UIImage
