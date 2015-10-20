@@ -35,6 +35,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         NSStrokeWidthAttributeName : -4,
     ]
     
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
